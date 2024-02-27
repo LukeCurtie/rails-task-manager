@@ -1,0 +1,45 @@
+
+
+  <strong>Title:</strong>
+  <% @tasks.each do |task| %>
+
+  <ul>
+    <li>
+
+      <input type="checkbox"   >
+
+
+
+
+
+
+
+
+      <%= link_to task.title, task_path(task) %>
+      <%= task.completed%>
+
+
+
+    </li>
+  </ul>
+
+
+
+
+
+
+
+
+
+  <%end%>
+
+  <%=
+link_to 'New Task', tasks_new_path
+
+%>
+
+
+
+
+
+<%# Update the index.html.erb view with the link_to helper to build the links. %>

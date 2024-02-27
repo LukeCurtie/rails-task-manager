@@ -1,0 +1,52 @@
+
+
+
+<h1>
+  <%= @task.title %>
+</h1>
+
+<h4>
+  <%= @task.details%>
+</h4>
+
+
+
+
+
+<p>
+
+
+
+
+
+  <%= @task.completed ? "This task is completed" : "This task is not completed yet" %>
+
+
+
+</p>
+
+
+<a href="/tasks">Go Back</a>
+
+
+
+
+<%=
+link_to 'Edit', edit_task_path(@task)
+
+
+%>
+
+<%= link_to "Delete",
+task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+
+<%#
+4 - As a user, I can view the details of a task
+We now have a list of tasks, and we would like to click on the task title and navigate to a new page, displaying the details of this task. Following the conventions from the lecture, add a new route, a new controller action and a new view. This action should find a specific task, thanks to its id, directly from params.
+
+Update the index.html.erb view with the link_to helper to build the links.
+
+⚠️ Again, in the view, do not focus on coding the checkboxes visual for now. You will have the opportunity to code it in the optional questions. %>
